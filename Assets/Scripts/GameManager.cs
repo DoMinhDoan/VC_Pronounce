@@ -184,10 +184,13 @@ public class GameManager : MonoBehaviour
 
     public void PronounceClicked()
     {
-        m_showingDescription = true;
-        m_dialogSteps.SetActive(m_showingDescription);
+        if(m_list[m_list.Count - 1].Steps !="")
+        {
+            m_showingDescription = true;
+            m_dialogSteps.SetActive(m_showingDescription);
 
-        m_dialogSteps.GetComponent<DialogSteps>().UpdateValue("/" + m_list[m_list.Count - 1].Key + "/", m_list[m_list.Count - 1].Steps);
+            m_dialogSteps.GetComponent<DialogSteps>().UpdateValue("/" + m_list[m_list.Count - 1].Key + "/", m_list[m_list.Count - 1].Steps);
+        }
     }
 
     public void ClosePronounceClicked()
