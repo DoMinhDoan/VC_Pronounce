@@ -2,145 +2,145 @@
     {
         "Key" : "p",
         "Color" : "92, 184, 111",
-        "Steps" : "",
+        "Steps" : "B1 : Môi kín.\nB2 : Lấy hơi, hóp bụng.\nB3 : Bật môi mạnh, cảm thấy có gió.\nB4 : Tạo âm /p/ như trong từ \"ping pong\".",
         "Examples" : "<color=#000000>p - paper /'p<color=#FF0000>eɪ<color=#000000>p<color=#FF0000>ə<color=#000000>r/"
     },
 	{
         "Key" : "b",
         "Color" : "92, 184, 111",
-        "Steps" : "",
+        "Steps" : "B1 : Môi kín.\nB2 : Ép lực.\nB3 : Bật môi.\nB4 : Tạo âm /b/ như trong từ \"bà ba\".\nB5 : Độ mạnh âm /b/ trong TA gấp 3 lần âm \"b\" trong TV.",
         "Examples" : "<color=#000000>b - boy /b<color=#FF0000>ɔɪ<color=#000000>/"
     },
 	{
         "Key" : "f",
         "Color" : "92, 184, 111",
-        "Steps" : "",
+        "Steps" : "B1 : Răng trên chạm 1/3 môi dưới (phía bên trong).\nB2 : Lấy hơi hóp bụng.\nB3 : Đẩy hơi 5s.\nB4 : Tạo âm /f/ như trong từ \"phờ phạc\".",
         "Examples" : "<color=#000000>f, gh, ph \n <color=#000000>five /f<color=#FF0000>aɪ<color=#000000>v/, <color=#000000>laugh /l<color=#FF0000>æ<color=#000000>f/, <color=#000000>graph /gr<color=#FF0000>æ<color=#000000>f/"
     },
 	{
         "Key" : "v",
         "Color" : "92, 184, 111",
-        "Steps" : "",
+        "Steps" : "B1 :  Răng trên chạm 1/3 môi dưới (phía bên trong).\nB2 : Ép lực.\nB3 : Đẩy hơi 5s.\nB4 : Tạo âm /v/ như trong từ \"vật vờ\".\nB5 : Độ mạnh âm /v/ trong TA gấp 3 lần độ mạnh âm \"v\" trong TV.",
         "Examples" : "<color=#000000>v - verb /v<color=#FF0000>ɜ:<color=#000000>rb/"
     },
 	{
         "Key" : "k",
         "Color" : "81, 180, 203",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Cảm nhận trái khế ở cổ.\nB3 : Dùng cơ cổ tạo lực đưa trái khế di chuyển đi lên.\nB4 : Bật mạnh cơ cổ.\nB5 : Tạo âm /k/ như trong từ \"cà kê\".\nB6 : Độ mạnh âm /k/ trong TA gấp 3 lần độ mạnh âm \"c/k\" trong TV.",
         "Examples" : "<color=#000000>c, ch, k, x \n <color=#000000>cut /k<color=#FF0000>ʌ<color=#000000>t/, <color=#000000>ache /<color=#FF0000>eɪ<color=#000000>k/, <color=#000000>key /k<color=#FF0000>i:<color=#000000>/, <color=#000000>exercise /<color=#FF0000>'e<color=#000000>ks<color=#FF0000>ə<color=#000000>rs<color=#FF0000>aɪ/"
     },
 	{
         "Key" : "g",
         "Color" : "81, 180, 203",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Cảm nhận trái khế ở cổ.\nB3 : Dùng cơ cổ tạo lực đưa trái khế di chuyển đi lên.\nB4 : Ép lực.\nB5 : Tạo âm /g/ như trong từ \"gay go\".\nB6 : Độ mạnh âm /g/ trong TA gấp 3 lần độ mạnh âm \"g\" trong TV.",
         "Examples" : "<color=#000000>g, gh, x \n <color=#000000>go /g<color=#FF0000>oʊ<color=#000000>/, <color=#000000>ghost /g<color=#FF0000>oʊ<color=#000000>st/, <color=#000000>exam /<color=#FF0000>ɪ<color=#000000>g'z<color=#FF0000>æ<color=#000000>m/"
     },
 	{
         "Key" : "θ",
         "Color" : "100, 70, 192",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Lấy hơi hóp bụng.\nB3 : Lưỡi đặt giữa 2 hàm răng.\nB4 : Đẩy hơi 5s. (Vị trí lưỡi không đổi)\nB5 : Tạo âm /θ/ như trong từ \"tha thướt\".",
         "Examples" : "<color=#000000>th - thin /θ<color=#FF0000>ɪ<color=#000000>n/"
     },
 	{
         "Key" : "ð",
         "Color" : "100, 70, 192",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Lưỡi đặt giữa 2 hàm răng.\nB3 : Ép lực từ mặt trên của lưỡi lên đầu răng hàm trên.\nB4 : Tạo âm /ð/ như trong từ \"đờ đẫn\".\nB5 : Độ mạnh âm /ð/ trong TA gấp 3 lần độ mạnh âm \"đ\" trong TV.\nB6 : Hàm dưới không di chuyển khi tạo âm.",
         "Examples" : "<color=#000000>th - the /ð<color=#FF0000>ə<color=#000000>/"
     },
 	{
         "Key" : "s",
         "Color" : "255, 255, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 2 hàm răng gần như chạm nhau.\nB3 : Lưỡi thẳng.\nB4 : Đẩy hơi 5s.\nB5 : Tạo âm /s/ như trong từ \"xinh xắn\".",
         "Examples" : "<color=#000000>s, se, c, ce, x \n <color=#000000>see /s<color=#FF0000>i:<color=#000000>/, <color=#000000>purchase /'p<color=#FF0000>ɜ:<color=#000000>rʧ<color=#FF0000>ə<color=#000000>s/, <color=#000000>circus /'s<color=#FF0000>ɜ:<color=#000000>rk<color=#FF0000>ə<color=#000000>s/,\n <color=#000000>nice /n<color=#FF0000>aɪ<color=#000000>s/, <color=#000000>six /s<color=#FF0000>ɪ<color=#000000>ks/"
     },
 	{
         "Key" : "z",
         "Color" : "255, 255, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 2 hàm răng gần như chạm nhau.\nB3 : Lưỡi thẳng.\nB4 : 1/3 mặt trên đầu lưỡi gần như chạm vòm họng.\nB5 : Ép lực.\nB6 : Đẩy hơi 5 giây.\nB7 : Tạo âm /z/ như trong từ \"giỏi giang\".\nB8 : Độ mạnh âm /z/ trong TA gấp 3 lần độ mạnh âm \"z\" trong TV.",
         "Examples" : "<color=#000000>z, ze, s, se, x \n <color=#000000>zoo /z<color=#FF0000>u:<color=#000000>/, <color=#000000>freeze /fr<color=#FF0000>i:<color=#000000>z/, <color=#000000>is /<color=#FF0000>ɪ<color=#000000>z/, \n<color=#000000>use /j<color=#FF0000>u:<color=#000000>z/, <color=#000000>exist /<color=#FF0000>ɪ<color=#000000>g'z<color=#FF0000>ɪ<color=#000000>st/"
     },
 	{
         "Key" : "ʃ",
         "Color" : "255, 255, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 2 hàm răng gần như chạm nhau.\nB3 : Lưỡi cong lên cao. Mặt dưới phía đầu lưỡi gần như chạm chính giữa vòm họng.\nB4 : Đẩy hơi 5s.\nB5 : Tạo âm /ʃ/ như trong từ \"sáo sang sông\".",
         "Examples" : "<color=#000000>sh, ch, sion, tion, tia, cia, cie, su \n <color=#000000>she /ʃ<color=#FF0000>i<color=#000000>/, <color=#000000>chef /ʃ<color=#FF0000>e<color=#000000>f/, <color=#000000>session /'s<color=#FF0000>e<color=#000000>ʃ<color=#FF0000>ə<color=#000000>n/, <color=#000000>nation /'n<color=#FF0000>eɪ<color=#000000>ʃ<color=#FF0000>ə<color=#000000>n/,\n<color=#000000>initial /<color=#FF0000>ɪ'<color=#000000>n<color=#FF0000>ɪ<color=#000000>ʃ<color=#FF0000>ə<color=#000000>l/, <color=#000000>special /'sp<color=#FF0000>e<color=#000000>ʃ<color=#FF0000>ə<color=#000000>l/, <color=#000000>efficient /<color=#FF0000>ɪ'<color=#000000>f<color=#FF0000>ɪ<color=#000000>ʃ<color=#FF0000>ə<color=#000000>nt/, <color=#000000>issue /<color=#FF0000>'ɪ<color=#000000>ʃ<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "ʒ",
         "Color" : "255, 255, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 2 hàm răng gần như chạm nhau.\nB3 : Lưỡi cong lên cao. Mặt dưới phía đầu lưỡi gần như chạm chính giữa vòm họng.\nB4 : Ép lực.\nB5 : Đẩy hơi 5s.\nB6 : Tạo âm /ʒ/.",
         "Examples" : "<color=#000000>ge, su, sion \n <color=#000000>garage /g<color=#FF0000>ə'<color=#000000>r<color=#FF0000>ɑ:<color=#000000>ʒ/, <color=#000000>usually /'j<color=#FF0000>u:<color=#000000>ʒ<color=#FF0000>u<color=#FF0000>ə<color=#000000>l<color=#FF0000>i/, <color=#000000>television /'t<color=#FF0000>e<color=#000000>l<color=#FF0000>ə<color=#000000>v<color=#FF0000>ɪ<color=#000000>ʒ<color=#FF0000>ə<color=#000000>n/"
     },
 	{
         "Key" : "t",
         "Color" : "255, 0, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 2 hàm răng gần như chạm nhau.\nB3 : Đầu lưỡi chạm vào đầu răng hàm trên.\nB4 : Búng đầu lưỡi, tạo âm /t/ như trong từ \"tiên tiến\".\n\tLưu ý : búng đầu lưỡi hướng ra ngoài hình vòng cung.\nB5 : Hàm dưới không di chuyển khi tạo âm.",
         "Examples" : "<color=#000000>t - ten /t<color=#FF0000>e<color=#000000>n/"
     },
 	{
         "Key" : "d",
         "Color" : "255, 0, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 1/3 đầu lưỡi nâng lên chạm vòm họng.\nB3 : Ép lực.\nB4 : Bật mạnh 1/3 đầu lưỡi, tạo âm /d/ giống như trong từ \"địa đàng\".\n\tLưu ý : bật mạnh 1/3 đầu lưỡi hướng ra ngoài hình vòng cung.\nB5 : Hàm dưới không di chuyển khi tạo âm.",
         "Examples" : "<color=#000000>d - do /d<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "ʧ",
         "Color" : "255, 0, 0",
-        "Steps" : "",
+        "Steps" : "Phần 1 = Tạo âm số 13 /t/ - 5 bước\n\tB1 : Môi mở.\n\tB2 : 2 hàm răng gần như chạm nhau\n\tB3 : Đầu lưỡi chạm vào đầu răng hàm trên.\n\tB4 : Búng đầu lưỡi, tạo âm /t/ như trong từ \"tiên tiến\".\n\t\tLưu ý : búng đầu lưỡi hướng ra ngoài hình vòng cung.\n\tB5 : Hàm dưới không di chuyển khi tạo âm.\nPhần 2 = Tạo âm số 17 /j/  - 6 bước\n\tB1 : Môi mở.\n\tB2 : Chính giữa thân lưỡi nâng lên chạm vòm họng.\n\tB3 : Ép lực.\n\tB4 : Tạo âm /j/ như trong từ \"da diết\".\n\tB5 : Độ mạnh âm /j/ trong TA gấp 3 lần độ mạnh âm \"d\" trong TV.\n\tB6 : Hàm dưới không di chuyển khi tạo âm.\nPhần 3 = Quyện phần 1 và phần 2 theo tỉ lệ độ mạnh 3/t/ : 1/j/",
         "Examples" : "<color=#000000>ch, tu \n <color=#000000>want you /w<color=#FF0000>ɑ:<color=#000000>ntj<color=#FF0000>u<color=#000000>/, <color=#000000>chin /ʧ<color=#FF0000>ɪ<color=#000000>n/, <color=#000000>picture /'p<color=#FF0000>ɪ<color=#000000>kʧ<color=#FF0000>ə<color=#000000>r/"
     },
 	{
         "Key" : "ʤ",
         "Color" : "255, 0, 0",
-        "Steps" : "",
+        "Steps" : "Phần 1 = Tạo âm số 14 /d/ - 5 bước\n\tB1 : Môi mở.\n\tB2 : 1/3 đầu lưỡi nâng lên chạm vòm họng.\n\tB3 : Ép lực.\n\tB4 : Bật mạnh 1/3 đầu lưỡi, tạo âm /d/ giống như trong từ \"địa đàng\".\n\t\tLưu ý : bật mạnh 1/3 đầu lưỡi hướng ra ngoài hình vòng cung.\n\tB5 : Hàm dưới không di chuyển khi tạo âm.\nPhần 2 = Tạo âm số 17 /j/  - 6 bước\n\tB1 : Môi mở.\n\tB2 : Chính giữa thân lưỡi nâng lên chạm vòm họng.\n\tB3 : Ép lực.\n\tB4 : Tạo âm /j/ như trong từ \"da diết\".\n\tB5 : Độ mạnh âm /j/ trong TA gấp 3 lần độ mạnh âm \"d\" trong TV.\n\tB6 : Hàm dưới không di chuyển khi tạo âm.\nPhần 3 = Quyện phần 1 và phần 2 theo tỉ lệ độ mạnh 3/d/ : 1/j/",
         "Examples" : "<color=#000000>j, ge, gi, du \n <color=#000000>need you /n<color=#FF0000>i:<color=#000000>dj<color=#FF0000>u<color=#000000>/, <color=#000000>jewel /'ʤ<color=#FF0000>u:ə<color=#000000>l/, <color=#000000>germ /ʤ<color=#FF0000>ɜ:<color=#000000>rm/,\n<color=#000000>giant /'ʤ<color=#FF0000>aɪə<color=#000000>nt/, <color=#000000>schedule /'sk<color=#FF0000>e<color=#000000>dj<color=#FF0000>u:<color=#000000>l/"
     },
 	{
         "Key" : "j",
         "Color" : "255, 0, 0",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Chính giữa thân lưỡi nâng lên chạm vòm họng.\nB3 : Ép lực.\nB4 : Tạo âm /j/ như trong từ \"da diết\".\nB5 : Độ mạnh âm /j/ trong TA gấp 3 lần độ mạnh âm \"d\" trong TV.\nB6 : Hàm dưới không di chuyển khi tạo âm.",
         "Examples" : "<color=#000000>y - you /j<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "m",
         "Color" : "49, 59, 172",
-        "Steps" : "",
+        "Steps" : "B1 : Môi kín.\nB2 : Ép lực đẩy âm lên mũi.\nB3 : Tạo âm /m/ như trong từ \"may mắn\".\nB4 : Độ mạnh âm /m/ trong TA gấp 3 lần âm \"m\" trong TV.",
         "Examples" : "<color=#000000>m - my /m<color=#FF0000>aɪ<color=#000000>/"
     },
 	{
         "Key" : "n",
         "Color" : "49, 59, 172",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 1/3 mặt trên đầu lưỡi nâng lên chạm vòm họng.\nB3 : Ép lực, đẩy âm lên mũi.\nB4 : Tạo âm /n/ như trong từ \"na ná\".\nB5 : Độ mạnh âm /n/ trong TA gấp 3 lần độ mạnh âm \"n\" trong TV.",
         "Examples" : "<color=#000000>n - now /n<color=#FF0000>aʊ<color=#000000>/"
     },
 	{
         "Key" : "ŋ",
         "Color" : "49, 59, 172",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : 1/3 cuối lưỡi nâng lên chạm vòm họng.\nB3 : Ép lực, đẩy âm lên mũi.\nB4 : Tạo âm /ŋ/ như trong từ \"ngây ngất\".\nB5 : Độ mạnh âm /ŋ/ trong TA gấp 3 lần độ mạnh âm \"ng\" trong TV.",
         "Examples" : "<color=#000000>n, ng \n <color=#000000>think /θ<color=#FF0000>ɪ<color=#000000>ŋk/, <color=#000000>sing /s<color=#FF0000>ɪ<color=#000000>ŋ/"
     },
 	{
         "Key" : "w",
         "Color" : "78, 116, 77",
-        "Steps" : "",
+        "Steps" : "B1 : Hóp má tròn môi.\nB2 : Đẩy lực từ dưới lên, từ trong ra ngoài. Lực dồn vào đầu môi.\nB3 : Bật môi, tạo âm /w/ giống như trong từ \"quằn quại\".\nB4 : Độ mạnh âm /w/ trong TA gấp 3 lần âm \"qu\" trong TV.\nB5 : Thả lỏng cơ mặt và cơ môi sau khi tạo âm.",
         "Examples" : "<color=#000000>w - when /w<color=#FF0000>e<color=#000000>n/"
     },
 	{
         "Key" : "r",
         "Color" : "78, 116, 77",
-        "Steps" : "",
+        "Steps" : "Đứng trước nguyên âm : 6 bước\n\tB1 : Hóp má tròn môi.\n\tB2 : Lưỡi cong lên cao, mặt dưới đầu lưỡi gần như chạm chính giữa vòm họng.\n\tB3 : Lực đẩy từ dưới lên trên, từ trong ra ngoài.\n\tB4 : Tạo âm /r/ giống như trong từ \"rình rang\".\n\tB5 : Độ mạnh âm /r/ trong TA mạnh gấp 3 lần âm \"r\" trong TV.\n\tB6 : Thả lỏng cơ mặt và cơ lưỡi sau khi tạo âm.\nĐứng sau nguyên âm : 5 bước\n\tB1 : Lưỡi cong lên cao, mặt dưới đầu lưỡi gần như chạm chính giữa vòm họng.\n\tB2 : Lực đẩy từ dưới lên trên, từ trong ra ngoài.\n\tB3 : Tạo âm /r/ giống như trong từ \"rình rang\".\n\tB4 : Độ mạnh âm /r/ trong TA mạnh gấp 3 lần âm \"r\" trong TV.\n\tB5 : Thả lỏng cơ mặt và cơ lưỡi sau khi tạo âm.",
         "Examples" : "<color=#000000>r - red /r<color=#FF0000>e<color=#000000>d/"
     },
 	{
         "Key" : "h",
         "Color" : "192, 92, 208",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Lấy hơi, hóp bụng.\nB3 : Đẩy hơi tạo âm /h/ giống như từ \"hả hê\".\nB4 : Độ mạnh âm /h/ gấp 3 lần âm \"h\" TV.",
         "Examples" : "<color=#000000>h - house /h<color=#FF0000>aʊ<color=#000000>s/"
     },
 	{
         "Key" : "l",
         "Color" : "223, 133, 107",
-        "Steps" : "",
+        "Steps" : "B1 : Môi mở.\nB2 : Lưỡi cong lên, đầu lưỡi chạm chỗ tiếp giáp giữa chân răng và nướu.\nB3 : Ép lực vào đầu lưỡi.\nB4 : Tạo âm /l/ giống như từ \"lượn lờ\".\nB5 : Độ mạnh âm /l/ trong TA gấp 3 lần âm \"l\" trong TV.\nB6 : Không cử động cơ môi khi tạo âm.",
         "Examples" : "<color=#000000>l - like /l<color=#FF0000>aɪ<color=#000000>k/"
     }
 ]

@@ -89,13 +89,19 @@ public class GameManager : MonoBehaviour
         m_timerValue = GetComponent<GameSetting>().GetTimerValue();
         m_auto = true;
 
-        GotoPronounce();
-        ProcessPronounceList();        
+        StartCoroutine(GotoVC());
     }
 
     public void GoToVCClick()
     {
         m_auto = false;
+
+        StartCoroutine(GotoVC());
+    }
+
+    IEnumerator GotoVC()
+    {
+        yield return new WaitForEndOfFrame();
 
         GotoPronounce();
         ProcessPronounceList();
@@ -178,9 +184,21 @@ public class GameManager : MonoBehaviour
 
     public void PronounceClicked()
     {
-        m_showingDescription = !m_showingDescription;
+        m_showingDescription = true;
         m_dialogSteps.SetActive(m_showingDescription);
 
-        m_dialogSteps.GetComponent<DialogSteps>().UpdateValue(m_list[m_list.Count - 1].Key, m_list[m_list.Count - 1].Key);
+        m_dialogSteps.GetComponent<DialogSteps>().UpdateValue("/" + m_list[m_list.Count - 1].Key + "/", m_list[m_list.Count - 1].Steps);
+    }
+
+    public void ClosePronounceClicked()
+    {        
+        m_dialogSteps.SetActive(false);        
+        StartCoroutine(ClosePronounce());
+    }
+
+    IEnumerator ClosePronounce()
+    {
+        yield return new WaitForEndOfFrame();
+        m_showingDescription = false;
     }
 }
