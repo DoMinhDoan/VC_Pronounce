@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
     public GameObject m_mainMenu;
     public GameObject m_gamePlay;
     public GameObject m_result;
+    public GameObject m_dialogSteps;
 
     public Image m_gameplayImage;
-    public Text m_gameplayVC;
+    public TextMeshProUGUI m_gameplayVC;
     public TextMeshProUGUI m_gameplayExamle;
 
     private List<PronounceInfo> m_vowels = new List<PronounceInfo>();
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     private int m_timerValue;
     private bool m_auto;
     private bool m_alphabetEnable;
+    private bool m_showingDescription = false;
 
     private void Awake()
     {
@@ -66,7 +68,7 @@ public class GameManager : MonoBehaviour
         TimeSpan timeSpan = DateTime.Now.TimeOfDay;
         if(m_list.Count > 1)
         {
-            if ((m_auto && timeSpan.Subtract(m_currentTime).TotalSeconds >= m_timerValue) || (!m_auto && Input.GetMouseButtonDown(0)))
+            if ((m_auto && timeSpan.Subtract(m_currentTime).TotalSeconds >= m_timerValue) || (!m_auto && Input.GetMouseButtonUp(0) && !m_showingDescription))
             {
                 m_currentTime = timeSpan;
 
@@ -172,5 +174,13 @@ public class GameManager : MonoBehaviour
             return result;
         }
         throw new Exception("Wrong Color Format");
+    }
+
+    public void PronounceClicked()
+    {
+        m_showingDescription = !m_showingDescription;
+        m_dialogSteps.SetActive(m_showingDescription);
+
+        m_dialogSteps.GetComponent<DialogSteps>().UpdateValue(m_list[m_list.Count - 1].Key, m_list[m_list.Count - 1].Key);
     }
 }

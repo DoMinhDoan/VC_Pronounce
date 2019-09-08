@@ -3,144 +3,144 @@
         "Key" : "p",
         "Color" : "92, 184, 111",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>p - paper /'p<color=#FF0000>eɪ<color=#000000>p<color=#FF0000>ə<color=#000000>r/"
     },
 	{
         "Key" : "b",
         "Color" : "92, 184, 111",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>b - boy /b<color=#FF0000>ɔɪ<color=#000000>/"
     },
 	{
         "Key" : "f",
         "Color" : "92, 184, 111",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>f, gh, ph \n <color=#000000>five /f<color=#FF0000>aɪ<color=#000000>v/, <color=#000000>laugh /l<color=#FF0000>æ<color=#000000>f/, <color=#000000>graph /gr<color=#FF0000>æ<color=#000000>f/"
     },
 	{
         "Key" : "v",
         "Color" : "92, 184, 111",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>v - verb /v<color=#FF0000>ɜ:<color=#000000>rb/"
     },
 	{
         "Key" : "k",
         "Color" : "81, 180, 203",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>c, ch, k, x \n <color=#000000>cut /k<color=#FF0000>ʌ<color=#000000>t/, <color=#000000>ache /<color=#FF0000>eɪ<color=#000000>k/, <color=#000000>key /k<color=#FF0000>i:<color=#000000>/, <color=#000000>exercise /<color=#FF0000>'e<color=#000000>ks<color=#FF0000>ə<color=#000000>rs<color=#FF0000>aɪ/"
     },
 	{
         "Key" : "g",
         "Color" : "81, 180, 203",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>g, gh, x \n <color=#000000>go /g<color=#FF0000>oʊ<color=#000000>/, <color=#000000>ghost /g<color=#FF0000>oʊ<color=#000000>st/, <color=#000000>exam /<color=#FF0000>ɪ<color=#000000>g'z<color=#FF0000>æ<color=#000000>m/"
     },
 	{
         "Key" : "θ",
         "Color" : "100, 70, 192",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>th - thin /θ<color=#FF0000>ɪ<color=#000000>n/"
     },
 	{
         "Key" : "ð",
         "Color" : "100, 70, 192",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>th - the /ð<color=#FF0000>ə<color=#000000>/"
     },
 	{
         "Key" : "s",
         "Color" : "255, 255, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>s, se, c, ce, x \n <color=#000000>see /s<color=#FF0000>i:<color=#000000>/, <color=#000000>purchase /'p<color=#FF0000>ɜ:<color=#000000>rʧ<color=#FF0000>ə<color=#000000>s/, <color=#000000>circus /'s<color=#FF0000>ɜ:<color=#000000>rk<color=#FF0000>ə<color=#000000>s/,\n <color=#000000>nice /n<color=#FF0000>aɪ<color=#000000>s/, <color=#000000>six /s<color=#FF0000>ɪ<color=#000000>ks/"
     },
 	{
         "Key" : "z",
         "Color" : "255, 255, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>z, ze, s, se, x \n <color=#000000>zoo /z<color=#FF0000>u:<color=#000000>/, <color=#000000>freeze /fr<color=#FF0000>i:<color=#000000>z/, <color=#000000>is /<color=#FF0000>ɪ<color=#000000>z/, \n<color=#000000>use /j<color=#FF0000>u:<color=#000000>z/, <color=#000000>exist /<color=#FF0000>ɪ<color=#000000>g'z<color=#FF0000>ɪ<color=#000000>st/"
     },
 	{
         "Key" : "ʃ",
         "Color" : "255, 255, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>sh, ch, sion, tion, tia, cia, cie, su \n <color=#000000>she /ʃ<color=#FF0000>i<color=#000000>/, <color=#000000>chef /ʃ<color=#FF0000>e<color=#000000>f/, <color=#000000>session /'s<color=#FF0000>e<color=#000000>ʃ<color=#FF0000>ə<color=#000000>n/, <color=#000000>nation /'n<color=#FF0000>eɪ<color=#000000>ʃ<color=#FF0000>ə<color=#000000>n/,\n<color=#000000>initial /<color=#FF0000>ɪ'<color=#000000>n<color=#FF0000>ɪ<color=#000000>ʃ<color=#FF0000>ə<color=#000000>l/, <color=#000000>special /'sp<color=#FF0000>e<color=#000000>ʃ<color=#FF0000>ə<color=#000000>l/, <color=#000000>efficient /<color=#FF0000>ɪ'<color=#000000>f<color=#FF0000>ɪ<color=#000000>ʃ<color=#FF0000>ə<color=#000000>nt/, <color=#000000>issue /<color=#FF0000>'ɪ<color=#000000>ʃ<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "ʒ",
         "Color" : "255, 255, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>ge, su, sion \n <color=#000000>garage /g<color=#FF0000>ə'<color=#000000>r<color=#FF0000>ɑ:<color=#000000>ʒ/, <color=#000000>usually /'j<color=#FF0000>u:<color=#000000>ʒ<color=#FF0000>u<color=#FF0000>ə<color=#000000>l<color=#FF0000>i/, <color=#000000>television /'t<color=#FF0000>e<color=#000000>l<color=#FF0000>ə<color=#000000>v<color=#FF0000>ɪ<color=#000000>ʒ<color=#FF0000>ə<color=#000000>n/"
     },
 	{
         "Key" : "t",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>t - ten /t<color=#FF0000>e<color=#000000>n/"
     },
 	{
         "Key" : "d",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>d - do /d<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "ʧ",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>ch, tu \n <color=#000000>want you /w<color=#FF0000>ɑ:<color=#000000>ntj<color=#FF0000>u<color=#000000>/, <color=#000000>chin /ʧ<color=#FF0000>ɪ<color=#000000>n/, <color=#000000>picture /'p<color=#FF0000>ɪ<color=#000000>kʧ<color=#FF0000>ə<color=#000000>r/"
     },
 	{
         "Key" : "ʤ",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>j, ge, gi, du \n <color=#000000>need you /n<color=#FF0000>i:<color=#000000>dj<color=#FF0000>u<color=#000000>/, <color=#000000>jewel /'ʤ<color=#FF0000>u:ə<color=#000000>l/, <color=#000000>germ /ʤ<color=#FF0000>ɜ:<color=#000000>rm/,\n<color=#000000>giant /'ʤ<color=#FF0000>aɪə<color=#000000>nt/, <color=#000000>schedule /'sk<color=#FF0000>e<color=#000000>dj<color=#FF0000>u:<color=#000000>l/"
     },
 	{
         "Key" : "j",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>y - you /j<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "m",
         "Color" : "49, 59, 172",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>m - my /m<color=#FF0000>aɪ<color=#000000>/"
     },
 	{
         "Key" : "n",
         "Color" : "49, 59, 172",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>n - now /n<color=#FF0000>aʊ<color=#000000>/"
     },
 	{
         "Key" : "ŋ",
         "Color" : "49, 59, 172",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>n, ng \n <color=#000000>think /θ<color=#FF0000>ɪ<color=#000000>ŋk/, <color=#000000>sing /s<color=#FF0000>ɪ<color=#000000>ŋ/"
     },
 	{
         "Key" : "w",
         "Color" : "78, 116, 77",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>w - when /w<color=#FF0000>e<color=#000000>n/"
     },
 	{
         "Key" : "r",
         "Color" : "78, 116, 77",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>r - red /r<color=#FF0000>e<color=#000000>d/"
     },
 	{
         "Key" : "h",
         "Color" : "192, 92, 208",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>h - house /h<color=#FF0000>aʊ<color=#000000>s/"
     },
 	{
         "Key" : "l",
         "Color" : "223, 133, 107",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>l - like /l<color=#FF0000>aɪ<color=#000000>k/"
     }
 ]
