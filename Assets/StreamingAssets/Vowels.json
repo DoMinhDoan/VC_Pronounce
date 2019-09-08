@@ -1,0 +1,110 @@
+[
+    {
+        "Key" : "ɑ:",
+        "Color" : "160, 89, 169",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "aɪ",
+        "Color" : "244, 215, 78",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "aʊ",
+        "Color" : "244, 215, 78",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ɔ:",
+        "Color" : "99, 182, 114",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ɔɪ",
+        "Color" : "99, 182, 114",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "oʊ",
+        "Color" : "99, 182, 114",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "e",
+        "Color" : "255, 0, 0",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "eɪ",
+        "Color" : "255, 0, 0",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "æ",
+        "Color" : "255, 0, 0",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ɪ",
+        "Color" : "51, 61, 185",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "i:",
+        "Color" : "51, 61, 185",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "i",
+        "Color" : "51, 61, 185",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ʊ",
+        "Color" : "69, 111, 73",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "u:",
+        "Color" : "69, 111, 73",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "u",
+        "Color" : "69, 111, 73",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ʌ",
+        "Color" : "89, 57, 184",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ɜ:",
+        "Color" : "89, 57, 184",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    },
+	{
+        "Key" : "ə",
+        "Color" : "89, 57, 184",
+        "Steps" : "",
+        "Examples" : "law - /lɑ:/"
+    }
+]
