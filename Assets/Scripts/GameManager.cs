@@ -18,101 +18,11 @@ public class GameManager : MonoBehaviour
     public GameObject m_result;
 
     public Image m_gameplayImage;
-    public Text m_gameplayText;
+    public Text m_gameplayText;    
 
-
-    /*private Dictionary<string, Color> m_vowels = new Dictionary<string, Color>() {
-        { "ɑ:", new Color(160, 89, 169) },  //1
-        { "aɪ", new Color(244, 215, 78) },  //2
-        { "aʊ", new Color(244, 215, 78) },  //3
-        { "ɔ:", new Color(99, 182, 114) },  //4
-        { "ɔɪ", new Color(99, 182, 114) },  //5
-        { "oʊ", new Color(99, 182, 114) },  //6
-        { "e", new Color(255, 0, 0) },      //7
-        { "eɪ", new Color(255, 0, 0) },     //8
-        { "æ", new Color(255, 0, 0) },      //9
-        { "ɪ", new Color(51, 61, 185) },    //10
-        { "i:", new Color(51, 61, 185) },   //11
-        { "i", new Color(51, 61, 185) },    //11p
-        { "ʊ", new Color(69, 111, 73) },    //12
-        { "u:", new Color(69, 111, 73) },   //13
-        { "u", new Color(69, 111, 73) },    //13p
-        { "ʌ", new Color(89, 57, 184) },    //14
-        { "ɜ:", new Color(89, 57, 184) },   //15
-        { "ə", new Color(89, 57, 184) },    //15p
-    };*/
-
-    /*private Dictionary<string, Color> m_consonants = new Dictionary<string, Color>() {
-        { "p", new Color(92, 184, 111) },   //1
-        { "b", new Color(92, 184, 111) },   //2
-        { "f", new Color(92, 184, 111) },   //3
-        { "v", new Color(92, 184, 111) },   //4
-        { "k", new Color(81, 180, 203) },   //5
-        { "ɡ", new Color(81, 180, 203) },   //6
-        { "θ", new Color(100, 70, 192) },   //7
-        { "ð", new Color(100, 70, 192) },   //8
-        { "s", new Color(255, 255, 0) },      //9
-        { "z", new Color(255, 255, 0) },    //10
-        { "ʃ", new Color(255, 255, 0) },    //11
-        { "ʒ", new Color(255, 255, 0) },    //12
-        { "t", new Color(255, 0, 0) },    //13
-        { "d", new Color(255, 0, 0) },    //14
-        { "ʧ", new Color(255, 0, 0) },    //15
-        { "ʤ", new Color(255, 0, 0) },    //16
-        { "j", new Color(255, 0, 0) },    //17
-        { "m", new Color(49, 59, 172) },    //18
-        { "n", new Color(49, 59, 172) },    //19
-        { "ŋ", new Color(49, 59, 172) },    //20
-        { "w", new Color(78, 116, 77) },    //21
-        { "r", new Color(78, 116, 77) },    //22
-        { "h", new Color(192, 92, 208) },    //23
-        { "l", new Color(223, 133, 107) },    //24
-    };*/
-
-    /*private Dictionary<string, Color> m_alphabet = new Dictionary<string, Color>() {
-        { "A", new Color(0, 0, 0) },   //1
-        { "B", new Color(0, 0, 0) },   //2
-        { "C", new Color(0, 0, 0) },   //3
-        { "D", new Color(0, 0, 0) },   //4
-        { "E", new Color(0, 0, 0) },   //5
-        { "F", new Color(0, 0, 0) },   //6
-        { "G", new Color(0, 0, 0) },   //7
-        { "H", new Color(0, 0, 0) },   //8
-        { "I", new Color(0, 0, 0) },      //9
-        { "J", new Color(0, 0, 0) },    //10
-        { "K", new Color(0, 0, 0) },    //11
-        { "L", new Color(0, 0, 0) },    //12
-        { "M", new Color(0, 0, 0) },    //13
-        { "N", new Color(0, 0, 0) },    //14
-        { "O", new Color(0, 0, 0) },    //15
-        { "P", new Color(0, 0, 0) },    //16
-        { "Q", new Color(0, 0, 0) },    //17
-        { "R", new Color(0, 0, 0) },    //18
-        { "S", new Color(0, 0, 0) },    //19
-        { "T", new Color(0, 0, 0) },    //20
-        { "U", new Color(0, 0, 0) },    //21
-        { "V", new Color(0, 0, 0) },    //22
-        { "W", new Color(0, 0, 0) },    //23
-        { "X", new Color(0, 0, 0) },    //24
-        { "Y", new Color(0, 0, 0) },    //25
-        { "Z", new Color(0, 0, 0) },    //26
-    };*/
-
-    List<PronounceInfo> m_vowels = new List<PronounceInfo>();
-    List<PronounceInfo> m_consonants = new List<PronounceInfo>();
-    List<PronounceInfo> m_alphabet = new List<PronounceInfo>();
-
-    /*struct GamePlay
-    {
-        public string m_gameplayText;
-        public Color m_gameplayColor;
-
-        public GamePlay(string text, Color color)
-        {
-            m_gameplayText = text;
-            m_gameplayColor = color;
-        }
-    }*/
+    private List<PronounceInfo> m_vowels = new List<PronounceInfo>();
+    private List<PronounceInfo> m_consonants = new List<PronounceInfo>();
+    private List<PronounceInfo> m_alphabet = new List<PronounceInfo>();
 
     private List<PronounceInfo> m_list = new List<PronounceInfo>();
     private TimeSpan m_startTime;
