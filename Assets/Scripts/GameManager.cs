@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject m_result;
 
     public Image m_gameplayImage;
-    public Text m_gameplayText;    
+    public Text m_gameplayVC;
+    public TextMeshProUGUI m_gameplayExamle;
 
     private List<PronounceInfo> m_vowels = new List<PronounceInfo>();
     private List<PronounceInfo> m_consonants = new List<PronounceInfo>();
@@ -122,7 +124,8 @@ public class GameManager : MonoBehaviour
         var color = new Color(float.Parse(StringToColor(m_list[m_list.Count - 1].Color)[0]) / 255, float.Parse(StringToColor(m_list[m_list.Count - 1].Color)[1]) / 255, float.Parse(StringToColor(m_list[m_list.Count - 1].Color)[2]) / 255, 1);
 
         m_gameplayImage.color = color;
-        m_gameplayText.text = m_list[m_list.Count - 1].Key;
+        m_gameplayVC.text = m_list[m_list.Count - 1].Key;
+        m_gameplayExamle.text = m_list[m_list.Count - 1].Examples;
     }
 
     private void CreationPronounceList(int loop)

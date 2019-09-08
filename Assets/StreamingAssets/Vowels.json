@@ -3,108 +3,108 @@
         "Key" : "ɑ:",
         "Color" : "160, 89, 169",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>law /l<color=#FF0000>ɑ:<color=#000000>/"
     },
 	{
         "Key" : "aɪ",
         "Color" : "244, 215, 78",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>lie /l<color=#FF0000>aɪ<color=#000000>/"
     },
 	{
         "Key" : "aʊ",
         "Color" : "244, 215, 78",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>how /h<color=#FF0000>aʊ<color=#000000>/"
     },
 	{
         "Key" : "ɔ:",
         "Color" : "99, 182, 114",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>more /m<color=#FF0000>ɔ:<color=#000000>r/"
     },
 	{
         "Key" : "ɔɪ",
         "Color" : "99, 182, 114",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>boy /b<color=#FF0000>ɔɪ<color=#000000>/"
     },
 	{
         "Key" : "oʊ",
         "Color" : "99, 182, 114",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>go /g<color=#FF0000>oʊ<color=#000000>/"
     },
 	{
         "Key" : "e",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>men /m<color=#FF0000>e<color=#000000>n/"
     },
 	{
         "Key" : "eɪ",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>main /m<color=#FF0000>eɪ<color=#000000>n/"
     },
 	{
         "Key" : "æ",
         "Color" : "255, 0, 0",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>man /m<color=#FF0000>æ<color=#000000>n/"
     },
 	{
         "Key" : "ɪ",
         "Color" : "51, 61, 185",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>experience /<color=#FF0000>ɪ<color=#000000>k<color=#FF0000>'<color=#000000>sp<color=#FF0000>ɪ<color=#000000>r<color=#FF0000>iə<color=#000000>ns/"
     },
 	{
         "Key" : "i:",
         "Color" : "51, 61, 185",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>be /b<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "i",
         "Color" : "51, 61, 185",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>baby /<color=#FF0000>'<color=#000000>b<color=#FF0000>eɪ<color=#000000>b<color=#FF0000>i<color=#000000>/"
     },
 	{
         "Key" : "ʊ",
         "Color" : "69, 111, 73",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>tour /t<color=#FF0000>ʊ<color=#000000>r/"
     },
 	{
         "Key" : "u:",
         "Color" : "69, 111, 73",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>shoe /ʃ<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "u",
         "Color" : "69, 111, 73",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>individual /<color=#FF0000>ˌɪ<color=#000000>nd<color=#FF0000>ɪ'<color=#000000>v<color=#FF0000>ɪ<color=#000000>dj<color=#FF0000>uə<color=#000000>l/"
     },
 	{
         "Key" : "ʌ",
         "Color" : "89, 57, 184",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>but /b<color=#FF0000>ʌ<color=#000000>t/"
     },
 	{
         "Key" : "ɜ:",
         "Color" : "89, 57, 184",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>worker /<color=#FF0000>'<color=#000000>w<color=#FF0000>ɜ:<color=#000000>rk<color=#FF0000>ə<color=#000000>r/"
     },
 	{
         "Key" : "ə",
         "Color" : "89, 57, 184",
         "Steps" : "",
-        "Examples" : "law - /lɑ:/"
+        "Examples" : "<color=#000000>worker /<color=#FF0000>'<color=#000000>w<color=#FF0000>ɜ:<color=#000000>rk<color=#FF0000>ə<color=#000000>r/"
     }
 ]
