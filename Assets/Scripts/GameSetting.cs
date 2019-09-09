@@ -8,22 +8,14 @@ public class GameSetting : MonoBehaviour
     [SerializeField]
     private Toggle m_alphabetActive;
     [SerializeField]
+    private Toggle m_exampleActive;
+    [SerializeField]
     private Slider m_loop;
     [SerializeField]
     private Slider m_timer;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    [SerializeField]
+    private Toggle m_auto;
+    
     public int GetLoopValue()
     {
         return (int)m_loop.value;
@@ -37,5 +29,15 @@ public class GameSetting : MonoBehaviour
     public bool AlphabetActive()
     {
         return m_alphabetActive.isOn;
+    }
+
+    public bool ExampleActive()
+    {
+        return m_exampleActive.isOn;
+    }
+
+    public bool AutoActive()
+    {
+        return m_auto.isOn;
     }
 }

@@ -1,207 +1,83 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(GameSetting))]
 public class GameManager : MonoBehaviour
 {
-
     public GameObject m_mainMenu;
     public GameObject m_gamePlay;
     public GameObject m_result;
-    public GameObject m_dialogSteps;
-
-    public Image m_gameplayImage;
-    public TextMeshProUGUI m_gameplayVC;
-    public TextMeshProUGUI m_gameplayExamle;
-
-    private List<PronounceInfo> m_vowels = new List<PronounceInfo>();
-    private List<PronounceInfo> m_consonants = new List<PronounceInfo>();
-    private List<PronounceInfo> m_alphabet = new List<PronounceInfo>();
-
-    private List<PronounceInfo> m_list = new List<PronounceInfo>();
-    private TimeSpan m_startTime;
-    private TimeSpan m_currentTime;
-    private int m_timerValue;
-    private bool m_auto;
-    private bool m_alphabetEnable;
-    private bool m_showingDescription = false;
-
-    private void Awake()
-    {
-        ReadPronounceDatabase("Vowels.json", ref m_vowels);
-        ReadPronounceDatabase("Consonants.json", ref m_consonants);
-        ReadPronounceDatabase("Alphabet.json", ref m_alphabet);
-    }
-
-    void ReadPronounceDatabase(string filename, ref List<PronounceInfo> list)
-    {
-        string filePath = Path.Combine(Application.streamingAssetsPath, filename);
-        using (var fs = File.OpenText(filePath))
-        {
-            using (JsonTextReader reader = new JsonTextReader(fs))
-            {
-                var serializer = new JsonSerializer();
-                list = serializer.Deserialize<List<PronounceInfo>>(reader);
-            }
-            fs.Close();
-        }
-    }
+    public GameObject m_gameSetting;       
 
     // Start is called before the first frame update
     private void Start()
     {
         GotoMainMenu();
+        SliderValueChanged();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GoToVCClicked()
     {
-        TimeSpan timeSpan = DateTime.Now.TimeOfDay;
-        if(m_list.Count > 1)
-        {
-            if ((m_auto && timeSpan.Subtract(m_currentTime).TotalSeconds >= m_timerValue) || (!m_auto && Input.GetMouseButtonUp(0) && !m_showingDescription))
-            {
-                m_currentTime = timeSpan;
-
-                m_list.RemoveAt(m_list.Count - 1);
-
-                ProcessNextPronounce();
-            }
-        }
-        else
-        {
-            GotoMainMenu();
-        }
-        
-    }
-
-    public void GoToVCAuto()
-    {
-        m_timerValue = GetComponent<GameSetting>().GetTimerValue();
-        m_auto = true;
-
         StartCoroutine(GotoVC());
     }
 
-    public void GoToVCClick()
+    public void GoToAlphabetClicked()
     {
-        m_auto = false;
-
-        StartCoroutine(GotoVC());
+        StartCoroutine(GotoAlphabet());
     }
 
     IEnumerator GotoVC()
     {
         yield return new WaitForEndOfFrame();
 
-        GotoPronounce();
-        ProcessPronounceList();
+        ProcessPronounce();
     }
 
-    private void GotoPronounce()
+    IEnumerator GotoAlphabet()
     {
-        m_alphabetEnable = GetComponent<GameSetting>().AlphabetActive();
+        yield return new WaitForEndOfFrame();
+
+        ProcessAlphabet();
+    }
+
+    void ProcessPronounce()
+    {
+        GotoPronounce();
+
+        int loop = m_gameSetting.GetComponent<GameSetting>().GetLoopValue();
+        m_gamePlay.GetComponent<GamePlay>().ProcessPronounceList(loop);
+    }
+
+    void ProcessAlphabet()
+    {
+        GotoPronounce();
+
+        int loop = m_gameSetting.GetComponent<GameSetting>().GetLoopValue();
+        m_gamePlay.GetComponent<GamePlay>().ProcessAlphabetList(loop);
+    }
+
+    public void GotoPronounce()
+    {
         m_mainMenu.SetActive(false);
         m_gamePlay.SetActive(true);
         m_result.SetActive(false);
+
+        m_gamePlay.GetComponent<GamePlay>().Init(m_gameSetting.GetComponent<GameSetting>());
     }
 
-    private void ProcessPronounceList()
-    {
-        int loop = GetComponent<GameSetting>().GetLoopValue();
-        CreationPronounceList(loop);
-        RandomPronounceList();
-
-        m_startTime = DateTime.Now.TimeOfDay;
-        m_currentTime = m_startTime;
-
-        ProcessNextPronounce();
-    }
-
-    private void ProcessNextPronounce()
-    {
-        var color = new Color(float.Parse(StringToColor(m_list[m_list.Count - 1].Color)[0]) / 255, float.Parse(StringToColor(m_list[m_list.Count - 1].Color)[1]) / 255, float.Parse(StringToColor(m_list[m_list.Count - 1].Color)[2]) / 255, 1);
-
-        m_gameplayImage.color = color;
-        m_gameplayVC.text = m_list[m_list.Count - 1].Key;
-        m_gameplayExamle.text = m_list[m_list.Count - 1].Examples;
-    }
-
-    private void CreationPronounceList(int loop)
-    {
-        for (int i = 0; i < loop; i++)
-        {
-            foreach (var vowel in m_vowels)
-            {
-                m_list.Add(vowel);
-            }
-
-            foreach (var consonant in m_consonants)
-            {
-                m_list.Add(consonant);
-            }
-
-            if(m_alphabetEnable)
-            {
-                foreach (var alphabet in m_alphabet)
-                {
-                    m_list.Add(alphabet);
-                }
-            }
-        }
-    }
-
-    private void RandomPronounceList()
-    {
-        m_list.Shuffle();
-    }
-
-    private void GotoMainMenu()
+    public void GotoMainMenu()
     {
         m_mainMenu.SetActive(true);
         m_gamePlay.SetActive(false);
         m_result.SetActive(false);
     }
+    
 
-    List<string> StringToColor(string value)
+    public void SliderValueChanged()
     {
-        var result = value.Split(',').ToList<string>();
-        if(result.Count == 3)
-        {
-            return result;
-        }
-        throw new Exception("Wrong Color Format");
-    }
-
-    public void PronounceClicked()
-    {
-        if(m_list[m_list.Count - 1].Steps !="")
-        {
-            m_showingDescription = true;
-            m_dialogSteps.SetActive(m_showingDescription);
-
-            m_dialogSteps.GetComponent<DialogSteps>().UpdateValue("/" + m_list[m_list.Count - 1].Key + "/", m_list[m_list.Count - 1].Steps);
-        }
-    }
-
-    public void ClosePronounceClicked()
-    {        
-        m_dialogSteps.SetActive(false);        
-        StartCoroutine(ClosePronounce());
-    }
-
-    IEnumerator ClosePronounce()
-    {
-        yield return new WaitForEndOfFrame();
-        m_showingDescription = false;
+        m_mainMenu.GetComponent<MainMenu>().UpdateMainMenu(m_gameSetting.GetComponent<GameSetting>().GetLoopValue(), m_gameSetting.GetComponent<GameSetting>().GetTimerValue());
     }
 }
