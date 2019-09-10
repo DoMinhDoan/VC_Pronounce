@@ -1,6 +1,6 @@
 [
     {
-        "Key" : "A",
+        "Key" : "<color=#000000>A</color>",
         "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>eɪ<color=#000000>/"
@@ -42,25 +42,25 @@
         "Examples" : "<color=#000000>/ʤ<color=#FF0000>i:<color=#000000>/"
     },
 	{
-        "Key" : "H",
+        "Key" : "<color=#000000>H</color>",
         "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>eɪ<color=#000000>ʧ/"
     },
 	{
-        "Key" : "I",
+        "Key" : "<color=#000000>I</color>",
         "Color" : "255, 255, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>aɪ<color=#000000>/"
     },
 	{
-        "Key" : "J",
+        "Key" : "<color=#000000>J</color>",
         "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/ʤ<color=#FF0000>eɪ<color=#000000>/"
     },
 	{
-        "Key" : "K",
+        "Key" : "<color=#000000>K</color>",
         "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/k<color=#FF0000>eɪ<color=#000000>/"
@@ -84,7 +84,7 @@
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>n/"
     },
 	{
-        "Key" : "O",
+        "Key" : "<color=#000000>O</color>",
         "Color" : "56, 88, 51",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>oʊ<color=#000000>/"
@@ -144,7 +144,7 @@
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>ks/"
     },
 	{
-        "Key" : "Y",
+        "Key" : "<color=#000000>Y</color>",
         "Color" : "255, 255, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/w<color=#FF0000>aɪ<color=#000000>/"
