@@ -1,157 +1,157 @@
 [
     {
         "Key" : "A",
-        "Color" : "255, 255, 255",
+        "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>eɪ<color=#000000>/"
     },
 	{
         "Key" : "B",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/b<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "C",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/s<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "D",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/d<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "E",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "F",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 0, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>f/"
     },
 	{
         "Key" : "G",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/ʤ<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "H",
-        "Color" : "255, 255, 255",
+        "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>eɪ<color=#000000>ʧ/"
     },
 	{
         "Key" : "I",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 255, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>aɪ<color=#000000>/"
     },
 	{
         "Key" : "J",
-        "Color" : "255, 255, 255",
+        "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/ʤ<color=#FF0000>eɪ<color=#000000>/"
     },
 	{
         "Key" : "K",
-        "Color" : "255, 255, 255",
+        "Color" : "86, 169, 183",
         "Steps" : "",
         "Examples" : "<color=#000000>/k<color=#FF0000>eɪ<color=#000000>/"
     },
 	{
         "Key" : "L",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 0, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>l/"
     },
 	{
         "Key" : "M",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 0, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>m/"
     },
 	{
         "Key" : "N",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 0, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>n/"
     },
 	{
         "Key" : "O",
-        "Color" : "255, 255, 255",
+        "Color" : "56, 88, 51",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>oʊ<color=#000000>/"
     },
 	{
         "Key" : "P",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/p<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "Q",
-        "Color" : "255, 255, 255",
+        "Color" : "56, 88, 51",
         "Steps" : "",
         "Examples" : "<color=#000000>/kj<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "R",
-        "Color" : "255, 255, 255",
+        "Color" : "155, 78, 158",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>a:<color=#000000>r/"
     },
 	{
         "Key" : "S",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 0, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>s/"
     },
 	{
         "Key" : "T",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/t<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "U",
-        "Color" : "255, 255, 255",
+        "Color" : "56, 88, 51",
         "Steps" : "",
         "Examples" : "<color=#000000>/j<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "V",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/v<color=#FF0000>i:<color=#000000>/"
     },
 	{
         "Key" : "W",
-        "Color" : "255, 255, 255",
+        "Color" : "56, 88, 51",
         "Steps" : "",
         "Examples" : "<color=#000000>/'d<color=#FF0000>ʌ<color=#000000>b<color=#FF0000>ə<color=#000000>lˌj<color=#FF0000>u:<color=#000000>/"
     },
 	{
         "Key" : "X",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 0, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/<color=#FF0000>e<color=#000000>ks/"
     },
 	{
         "Key" : "Y",
-        "Color" : "255, 255, 255",
+        "Color" : "255, 255, 0",
         "Steps" : "",
         "Examples" : "<color=#000000>/w<color=#FF0000>aɪ<color=#000000>/"
     },
 	{
         "Key" : "Z",
-        "Color" : "255, 255, 255",
+        "Color" : "37, 46, 177",
         "Steps" : "",
         "Examples" : "<color=#000000>/z<color=#FF0000>i:<color=#000000>/"
     }
