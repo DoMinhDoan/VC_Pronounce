@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject m_mainMenu;
     public GameObject m_gamePlay;
+    public GameObject m_gameIPA;
     public GameObject m_result;
     public GameObject m_gameSetting;       
 
@@ -29,6 +30,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GotoAlphabet());
     }
 
+    public void GoToIPAClicked()
+    {
+        StartCoroutine(GotoIPA());
+    }
+
     IEnumerator GotoVC()
     {
         yield return new WaitForEndOfFrame();
@@ -41,6 +47,13 @@ public class GameManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         ProcessAlphabet();
+    }
+
+    IEnumerator GotoIPA()
+    {
+        yield return new WaitForEndOfFrame();
+
+        ProcessIPA();
     }
 
     void ProcessPronounce()
@@ -59,6 +72,13 @@ public class GameManager : MonoBehaviour
         m_gamePlay.GetComponent<GamePlay>().ProcessAlphabetList(loop);
     }
 
+    void ProcessIPA()
+    {
+        m_mainMenu.SetActive(false);
+        m_gameIPA.SetActive(true);
+        m_result.SetActive(false);
+    }
+
     public void GotoPronounce()
     {
         m_mainMenu.SetActive(false);
@@ -73,6 +93,7 @@ public class GameManager : MonoBehaviour
         m_mainMenu.SetActive(true);
         m_gamePlay.SetActive(false);
         m_result.SetActive(false);
+        m_gameIPA.SetActive(false);
     }
     
 

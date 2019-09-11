@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1042256216478",
+    "firebase_url": "https://vcpronounce.firebaseio.com",
+    "project_id": "vcpronounce",
+    "storage_bucket": "vcpronounce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042256216478:android:bbc99ee177867e6d22d68f",
+        "android_client_info": {
+          "package_name": "com.ateam.pronounce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042256216478-315mgnbfpafr8t3id8hqepbi4rato7ne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOlK7Uc7Sm_orvSAx05178GT-6StAauoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042256216478-315mgnbfpafr8t3id8hqepbi4rato7ne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

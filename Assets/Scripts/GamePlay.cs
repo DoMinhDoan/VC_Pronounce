@@ -11,8 +11,8 @@ using UnityEngine.UI;
 public class GamePlay : MonoBehaviour
 {
     public Image m_gameplayImage;
-    public TextMeshProUGUI m_gameplayVC;
-    public TextMeshProUGUI m_gameplayExamle;
+    public GameObject m_gameplayVC;
+    public GameObject m_gameplayExamle;
     public GameObject m_dialogSteps;
     public GameObject m_gameManager;
 
@@ -29,16 +29,32 @@ public class GamePlay : MonoBehaviour
     // caching
     private GameSetting m_gameSetting;
 
+    float m_pronounceOffsetY = 0;
+
+
     private void Awake()
     {
         ReadPronounceDatabase("Vowels", ref m_vowels);
         ReadPronounceDatabase("Consonants", ref m_consonants);
         ReadPronounceDatabase("Alphabet", ref m_alphabet);
+
+        m_pronounceOffsetY = m_gameplayVC.transform.localPosition.y;
     }
 
     public void Init(GameSetting gameSetting)
     {
         m_gameSetting = gameSetting;
+
+        if (m_gameSetting.ExampleActive())
+        {
+            m_gameplayVC.transform.localPosition = new Vector3(m_gameplayVC.transform.localPosition.x, m_pronounceOffsetY, m_gameplayVC.transform.localPosition.z);
+            m_gameplayExamle.SetActive(true);
+        }
+        else
+        {
+            m_gameplayVC.transform.localPosition = new Vector3(m_gameplayVC.transform.localPosition.x, 0, m_gameplayVC.transform.localPosition.z);
+            m_gameplayExamle.SetActive(false);
+        }
     }
     // Update is called once per frame
     void Update()
@@ -73,15 +89,11 @@ public class GamePlay : MonoBehaviour
         var color = new Color(float.Parse(StringToColor(pronounces[pronounces.Count - 1].Color)[0]) / 255, float.Parse(StringToColor(pronounces[pronounces.Count - 1].Color)[1]) / 255, float.Parse(StringToColor(pronounces[pronounces.Count - 1].Color)[2]) / 255, 1);
 
         m_gameplayImage.color = color;
-        m_gameplayVC.text = pronounces[pronounces.Count - 1].Key;
+        m_gameplayVC.GetComponentInChildren<TextMeshProUGUI>().text = pronounces[pronounces.Count - 1].Key;
 
         if (m_gameSetting.ExampleActive())
         {
-            m_gameplayExamle.text = pronounces[pronounces.Count - 1].Examples;
-        }
-        else
-        {
-            m_gameplayExamle.text = "";
+            m_gameplayExamle.GetComponentInChildren<TextMeshProUGUI>().text = pronounces[pronounces.Count - 1].Examples;
         }
     }
 
