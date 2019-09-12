@@ -7,7 +7,9 @@ using Firebase.Database;
 using Firebase.Unity.Editor;
 using System;
 using System.Linq;
-
+using System.IO;
+using Newtonsoft.Json.Bson;
+using Newtonsoft.Json;
 
 public class FbDatabase : MonoBehaviour
 {
@@ -26,6 +28,10 @@ public class FbDatabase : MonoBehaviour
     List<IPAInfo> m_IPAImages = new List<IPAInfo>();
 
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
+
+
+    public delegate void CallbackSaveLocalDatabase();
+    public CallbackSaveLocalDatabase callbackSaveLocalDatabase = null;
 
     private void Start()
     {
@@ -79,6 +85,8 @@ public class FbDatabase : MonoBehaviour
                   {
                       m_IPAImages.Add(new IPAInfo(childSnapshot.Key, childSnapshot.Value.ToString()));
                   }
+
+                  callbackSaveLocalDatabase += SaveLocalDatabase;
               }
           };
     }
@@ -86,5 +94,18 @@ public class FbDatabase : MonoBehaviour
     public List<IPAInfo> GetIPAImages()
     {
         return m_IPAImages;
+    }
+
+    void SaveLocalDatabase()
+    {
+        var filePath = Path.Combine(Application.persistentDataPath, "IPA.dat");
+        using (var fs = File.Open(filePath, FileMode.Create))
+        {
+            using (var writer = new BsonWriter(fs))
+            {
+                var serializer = new JsonSerializer();
+                serializer.Serialize(writer, m_IPAImages);
+            }
+        }
     }
 }

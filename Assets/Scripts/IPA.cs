@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using static FbDatabase;
 
 public class IPA : MonoBehaviour
 {
@@ -17,10 +20,23 @@ public class IPA : MonoBehaviour
     private int m_currentImageIndex = 0;
     private FbDatabase m_fbDatabase;
 
+    private List<IPAInfo> m_IPAs;
+
+    private void Start()
+    {
+        var fbDatabase = m_gameManager.GetComponent<FbDatabase>();
+        if (fbDatabase.GetIPAImages().Count > 0)
+        {
+            fbDatabase.callbackSaveLocalDatabase();
+        }
+    }
+
     private void OnEnable()
     {
         m_fbDatabase = m_gameManager.GetComponent<FbDatabase>();
-        m_currentImageIndex = m_fbDatabase.GetIPAImages().Count - 1;
+        m_IPAs = LoadLocalDatabase();
+
+        m_currentImageIndex = m_IPAs.Count - 1;
 
         m_nextButton.interactable = true;
         m_previousButton.interactable = true;
@@ -33,16 +49,16 @@ public class IPA : MonoBehaviour
 
     void ProcessCurrentFrame()
     {
-        if(m_fbDatabase.GetIPAImages().Count > 0)
+        if(m_IPAs.Count > 0)
         {
-            m_IPATitle.text = m_fbDatabase.GetIPAImages()[m_currentImageIndex].ipaKey;
-            AddIPASprite(m_fbDatabase.GetIPAImages()[m_currentImageIndex].ipaKey, m_fbDatabase.GetIPAImages()[m_currentImageIndex].ipaValue);
+            m_IPATitle.text = m_IPAs[m_currentImageIndex].ipaKey;
+            AddIPASprite(m_IPAs[m_currentImageIndex].ipaKey, m_IPAs[m_currentImageIndex].ipaValue);
         }
     }
 
     public void NextImageClicked()
     {
-        if (m_currentImageIndex < m_fbDatabase.GetIPAImages().Count - 1)
+        if (m_currentImageIndex < m_IPAs.Count - 1)
         {
             m_previousButton.interactable = true;
             m_currentImageIndex++;
@@ -71,7 +87,7 @@ public class IPA : MonoBehaviour
 
     void CheckNext()
     {
-        if (m_currentImageIndex == m_fbDatabase.GetIPAImages().Count - 1)
+        if (m_currentImageIndex == m_IPAs.Count - 1)
         {
             m_nextButton.interactable = false;
         }
@@ -163,5 +179,22 @@ public class IPA : MonoBehaviour
             //if it doesn't, create it
             Directory.CreateDirectory(path);
         }
+    }
+
+    List<IPAInfo> LoadLocalDatabase()
+    {
+        List<IPAInfo> IPAs = new List<IPAInfo>();
+        var filePath = Path.Combine(Application.persistentDataPath, "IPA.dat");
+        using (var fs = File.OpenRead(filePath))
+        {
+            using (var reader = new BsonReader(fs))
+            {
+                reader.ReadRootValueAsArray = true;
+                var deserializer = new JsonSerializer();
+                IPAs = deserializer.Deserialize<List<IPAInfo>>(reader);
+            }
+        }
+
+        return IPAs;
     }
 }
