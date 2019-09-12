@@ -71,7 +71,7 @@ public class FbDatabase : MonoBehaviour
     public void RegisterIPAInformation()
     {
         FirebaseDatabase.DefaultInstance
-          .GetReference("")
+          .GetReference("IPA")
           .ValueChanged += (object sender2, ValueChangedEventArgs e2) =>
           {
               if (e2.DatabaseError != null)
