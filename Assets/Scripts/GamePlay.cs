@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,6 +42,15 @@ public class GamePlay : MonoBehaviour
         m_pronounceOffsetY = m_gameplayVC.transform.localPosition.y;
     }
 
+    private void Start()
+    {
+        var fbDatabase = m_gameManager.GetComponent<FbDatabase>();
+        if (fbDatabase.GetVCAJson().Count > 0)
+        {
+            fbDatabase.callbackSaveVCALocalDatabase();
+        }
+    }
+
     public void Init(GameSetting gameSetting)
     {
         m_gameSetting = gameSetting;
@@ -80,8 +90,25 @@ public class GamePlay : MonoBehaviour
 
     void ReadPronounceDatabase(string filename, ref List<PronounceInfo> list)
     {
-        TextAsset database = Resources.Load<TextAsset>(filename);
-        list = JsonConvert.DeserializeObject<List<PronounceInfo>>(database.text);
+
+        var filePath = Path.Combine(Application.persistentDataPath, filename + ".dat");
+        if(File.Exists(filePath))
+        {
+            using (var fs = File.OpenRead(filePath))
+            {
+                using (var reader = new BsonReader(fs))
+                {
+                    reader.ReadRootValueAsArray = true;
+                    var deserializer = new JsonSerializer();
+                    list = deserializer.Deserialize<List<PronounceInfo>>(reader);
+                }
+            }
+        }
+        else
+        {
+            TextAsset database = Resources.Load<TextAsset>(filename);
+            list = JsonConvert.DeserializeObject<List<PronounceInfo>>(database.text);
+        }
     }
 
     public void UpdateGamePlay(List<PronounceInfo> pronounces)

@@ -10,28 +10,33 @@ using System.Linq;
 using System.IO;
 using Newtonsoft.Json.Bson;
 using Newtonsoft.Json;
+using UnityEngine.Networking;
 
 public class FbDatabase : MonoBehaviour
 {
-    public struct IPAInfo
+    public struct VCInfo
     {
-        public string ipaKey;
-        public string ipaValue;
+        public string vcKey;
+        public string vcValue;
 
-        public IPAInfo(string name, string link)
+        public VCInfo(string name, string link)
         {
-            ipaKey = name;
-            ipaValue = link;
+            vcKey = name;
+            vcValue = link;
         }
     }
 
-    List<IPAInfo> m_IPAImages = new List<IPAInfo>();
+    List<VCInfo> m_IPAImages = new List<VCInfo>();
+    List<VCInfo> m_VCAJson = new List<VCInfo>();
 
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
 
 
-    public delegate void CallbackSaveLocalDatabase();
-    public CallbackSaveLocalDatabase callbackSaveLocalDatabase = null;
+    public delegate void CallbackSaveIPALocalDatabase();
+    public CallbackSaveIPALocalDatabase callbackSaveIPALocalDatabase = null;
+
+    public delegate void CallbackSaveVCALocalDatabase();
+    public CallbackSaveVCALocalDatabase callbackSaveVCALocalDatabase = null;
 
     private void Start()
     {
@@ -54,6 +59,7 @@ public class FbDatabase : MonoBehaviour
     {
         InitializeFirebase();
 
+        RegisterVCAInformation();
         RegisterIPAInformation();
     }
 
@@ -83,20 +89,48 @@ public class FbDatabase : MonoBehaviour
               {
                   foreach (var childSnapshot in e2.Snapshot.Children)
                   {
-                      m_IPAImages.Add(new IPAInfo(childSnapshot.Key, childSnapshot.Value.ToString()));
+                      m_IPAImages.Add(new VCInfo(childSnapshot.Key, childSnapshot.Value.ToString()));
                   }
 
-                  callbackSaveLocalDatabase += SaveLocalDatabase;
+                  callbackSaveIPALocalDatabase += SaveLocalIPADatabase;
               }
           };
     }
-    
-    public List<IPAInfo> GetIPAImages()
+
+    public void RegisterVCAInformation()
+    {
+        FirebaseDatabase.DefaultInstance
+          .GetReference("VCA")
+          .ValueChanged += (object sender2, ValueChangedEventArgs e2) =>
+          {
+              if (e2.DatabaseError != null)
+              {
+                  return;
+              }
+
+              if (e2.Snapshot != null && e2.Snapshot.ChildrenCount > 0)
+              {
+                  foreach (var childSnapshot in e2.Snapshot.Children)
+                  {
+                      m_VCAJson.Add(new VCInfo(childSnapshot.Key, childSnapshot.Value.ToString()));
+                  }
+
+                  callbackSaveVCALocalDatabase += SaveLocalVCADatabase;
+              }
+          };
+    }
+
+    public List<VCInfo> GetIPAImages()
     {
         return m_IPAImages;
     }
 
-    void SaveLocalDatabase()
+    public List<VCInfo> GetVCAJson()
+    {
+        return m_VCAJson;
+    }
+
+    void SaveLocalIPADatabase()
     {
         var filePath = Path.Combine(Application.persistentDataPath, "IPA.dat");
         using (var fs = File.Open(filePath, FileMode.Create))
@@ -105,6 +139,39 @@ public class FbDatabase : MonoBehaviour
             {
                 var serializer = new JsonSerializer();
                 serializer.Serialize(writer, m_IPAImages);
+            }
+        }
+    }
+
+    void SaveLocalVCADatabase()
+    {        
+        foreach(var vca in m_VCAJson)
+        {
+            StartCoroutine(DownloadVCAJson(vca.vcKey, vca.vcValue));
+        }
+        
+    }
+
+    IEnumerator DownloadVCAJson(string name, string url)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(url);
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            var filePath = Path.Combine(Application.persistentDataPath, name + ".dat");
+            using (var fs = File.Open(filePath, FileMode.Create))
+            {
+                using (var writer = new BsonWriter(fs))
+                {
+                    var serializer = new JsonSerializer();
+                    var vcaObject = JsonConvert.DeserializeObject(www.downloadHandler.text);
+                    serializer.Serialize(writer, vcaObject);
+                }
             }
         }
     }

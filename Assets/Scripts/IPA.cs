@@ -20,14 +20,14 @@ public class IPA : MonoBehaviour
     private int m_currentImageIndex = 0;
     private FbDatabase m_fbDatabase;
 
-    private List<IPAInfo> m_IPAs;
+    private List<VCInfo> m_IPAs;
 
     private void Start()
     {
         var fbDatabase = m_gameManager.GetComponent<FbDatabase>();
         if (fbDatabase.GetIPAImages().Count > 0)
         {
-            fbDatabase.callbackSaveLocalDatabase();
+            fbDatabase.callbackSaveIPALocalDatabase();
         }
     }
 
@@ -51,8 +51,8 @@ public class IPA : MonoBehaviour
     {
         if(m_IPAs.Count > 0)
         {
-            m_IPATitle.text = m_IPAs[m_currentImageIndex].ipaKey;
-            AddIPASprite(m_IPAs[m_currentImageIndex].ipaKey, m_IPAs[m_currentImageIndex].ipaValue);
+            m_IPATitle.text = m_IPAs[m_currentImageIndex].vcKey;
+            AddIPASprite(m_IPAs[m_currentImageIndex].vcKey, m_IPAs[m_currentImageIndex].vcValue);
         }
     }
 
@@ -181,9 +181,9 @@ public class IPA : MonoBehaviour
         }
     }
 
-    List<IPAInfo> LoadLocalDatabase()
+    List<VCInfo> LoadLocalDatabase()
     {
-        List<IPAInfo> IPAs = new List<IPAInfo>();
+        List<VCInfo> IPAs = new List<VCInfo>();
         var filePath = Path.Combine(Application.persistentDataPath, "IPA.dat");
         using (var fs = File.OpenRead(filePath))
         {
@@ -191,7 +191,7 @@ public class IPA : MonoBehaviour
             {
                 reader.ReadRootValueAsArray = true;
                 var deserializer = new JsonSerializer();
-                IPAs = deserializer.Deserialize<List<IPAInfo>>(reader);
+                IPAs = deserializer.Deserialize<List<VCInfo>>(reader);
             }
         }
 
