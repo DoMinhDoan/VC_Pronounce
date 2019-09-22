@@ -27,7 +27,7 @@ public class IPA : MonoBehaviour
         var fbDatabase = m_gameManager.GetComponent<FbDatabase>();
         if (fbDatabase.GetIPAImages().Count > 0)
         {
-            fbDatabase.callbackSaveIPALocalDatabase();
+            fbDatabase.callbackSaveLocalDatabase("IPA");
         }
     }
 

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject m_mainMenu;
     public GameObject m_gamePlay;
     public GameObject m_gameIPA;
+    public GameObject m_gameTopic;
     public GameObject m_result;
     public GameObject m_gameSetting;       
 
@@ -35,6 +36,13 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GotoIPA());
     }
 
+    public void GotoTopicClicked()
+    {
+        m_mainMenu.SetActive(false);
+        m_gameTopic.SetActive(true);
+        m_result.SetActive(false);
+    }
+
     IEnumerator GotoVC()
     {
         yield return new WaitForEndOfFrame();
@@ -55,6 +63,7 @@ public class GameManager : MonoBehaviour
 
         ProcessIPA();
     }
+    
 
     void ProcessPronounce()
     {

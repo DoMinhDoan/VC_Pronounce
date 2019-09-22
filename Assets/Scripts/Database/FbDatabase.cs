@@ -28,12 +28,14 @@ public class FbDatabase : MonoBehaviour
 
     List<VCInfo> m_IPAImages = new List<VCInfo>();
     List<VCInfo> m_VCAJson = new List<VCInfo>();
+    List<VCInfo> m_Topic = new List<VCInfo>();
+    List<PracticeInfo> m_Practice = new List<PracticeInfo>();
 
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
 
 
-    public delegate void CallbackSaveIPALocalDatabase();
-    public CallbackSaveIPALocalDatabase callbackSaveIPALocalDatabase = null;
+    public delegate void CallbackSaveLocalDatabase(string name);
+    public CallbackSaveLocalDatabase callbackSaveLocalDatabase = null;
 
     public delegate void CallbackSaveVCALocalDatabase();
     public CallbackSaveVCALocalDatabase callbackSaveVCALocalDatabase = null;
@@ -60,6 +62,7 @@ public class FbDatabase : MonoBehaviour
         InitializeFirebase();
 
         RegisterVCAInformation();
+        RegisterTopicInformation();
         RegisterIPAInformation();
     }
 
@@ -92,7 +95,7 @@ public class FbDatabase : MonoBehaviour
                       m_IPAImages.Add(new VCInfo(childSnapshot.Key, childSnapshot.Value.ToString()));
                   }
 
-                  callbackSaveIPALocalDatabase += SaveLocalIPADatabase;
+                  callbackSaveLocalDatabase += SaveLocalDatabase;
               }
           };
     }
@@ -120,6 +123,48 @@ public class FbDatabase : MonoBehaviour
           };
     }
 
+    public void RegisterTopicInformation()
+    {
+        FirebaseDatabase.DefaultInstance
+          .GetReference("TOPIC")
+          .ValueChanged += (object sender2, ValueChangedEventArgs e2) =>
+          {
+              if (e2.DatabaseError != null)
+              {
+                  return;
+              }
+
+              if (e2.Snapshot != null && e2.Snapshot.ChildrenCount > 0)
+              {
+                  foreach (var childSnapshot in e2.Snapshot.Children)
+                  {
+                      m_Topic.Add(new VCInfo(childSnapshot.Key, childSnapshot.Value.ToString()));
+                  }
+
+                  callbackSaveLocalDatabase += SaveLocalDatabase;
+              }
+          };
+    }
+
+    public void RegisterPractiveInformation(string topic)
+    {
+        FirebaseDatabase.DefaultInstance
+          .GetReference("PRACTICE/" + topic).GetValueAsync().ContinueWith(task => {
+              if (task.IsFaulted)
+              {
+                  // Handle the error...
+              }
+              else if (task.IsCompleted)
+              {
+                  DataSnapshot snapshot = task.Result;
+                  foreach (DataSnapshot childSnapshot in snapshot.Children)
+                  {
+                      m_Practice.Add(new PracticeInfo(childSnapshot.Child("Key").Value.ToString(), childSnapshot.Child("Image").Value.ToString(), childSnapshot.Child("Sound").Value.ToString(), childSnapshot.Child("Description").Value.ToString()));
+                  }
+              }
+          });
+    }
+
     public List<VCInfo> GetIPAImages()
     {
         return m_IPAImages;
@@ -130,9 +175,14 @@ public class FbDatabase : MonoBehaviour
         return m_VCAJson;
     }
 
-    void SaveLocalIPADatabase()
+    public List<VCInfo> GetTopic()
     {
-        var filePath = Path.Combine(Application.persistentDataPath, "IPA.dat");
+        return m_Topic;
+    }
+
+    void SaveLocalDatabase(string name)
+    {
+        var filePath = Path.Combine(Application.persistentDataPath, name + ".dat");
         using (var fs = File.Open(filePath, FileMode.Create))
         {
             using (var writer = new BsonWriter(fs))
